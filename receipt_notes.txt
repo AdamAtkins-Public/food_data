@@ -1,0 +1,24 @@
+Each receipt has a store location, a date, and itemized priced list
+
+each item in the list has an abbrev name and price; some items may include a sales price reduction
+
+each receipt has a sales total
+
+IF the item is on sale THEN there is a SALE SAVINGS value under the item; the items price on the receipt
+	automatically includes the sale price reduction
+	FOR EXAMPLE
+		Red beans $0.69
+		SALE $0.20
+
+	Means the 'Normal price' is $0.89
+
+So we must decide, when entering the data do we store normal price then calculate actual cost
+ OR do we store actual cost and calculate normal price
+
+Argument for the former; I think, generally, when querying the data for a large time period
+	we are interested in the variabilty of the normal price
+		That is to say: I anticipate the more frequent queries to be related to normal price
+		so we can reduce compute by storing this price instead of calculating.
+
+A query interested in the acutal price would be something like: "how much money did I spend on beans last year?"
+A query interested in the normal price would be something like: "how has the cost/price of beans changed over the last year?"
