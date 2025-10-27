@@ -1,0 +1,7 @@
+{
+	"session_folder": "PATH_TO_RAW_DATA_IMAGE_FOLDER", 
+	"tesseract_cmd": "PATH_TO_TESSERACT_EXE",
+	"cv_text_detector_model": "PATH_TO_OPENCV_TEXT_DETECTION_MODEL",
+	"cv_image_resolution_H":1056,
+	"cv_image_resolution_W":1920 
+}
