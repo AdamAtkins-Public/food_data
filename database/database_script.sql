@@ -16,6 +16,7 @@ CREATE TABLE receipts (
 );
 
 CREATE TABLE transaction (
+	transaction_id SERIAL UNIQUE,
 	receipt_id INTEGER NOT NULL,
 	general_name VARCHAR(255) NOT NULL,
 	abbrv_name VARCHAR(255) NOT	NULL,
